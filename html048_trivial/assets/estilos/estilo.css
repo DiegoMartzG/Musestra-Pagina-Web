@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 50px 50px 1fr 50px;
+    grid-template-areas: 
+        "zh zh" "zn zn" "zs zs" "zf zf";
+
+}
+header{
+    grid-area: zh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+header>div{
+display: flex;
+font-size: 25px;
+
+}
+h2{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+    padding: 20px;
+
+}
+nav{
+    grid-area: zn;
+    background-color: #444;
+    color: white;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+}
+section{
+    grid-area: zs;
+    background-color: #ddd;
+    color: black;
+   position: relative;
+   background:linear-gradient(rgb(184, 184, 235), rgb(71, 71, 233) ) ;
+    
+    
+}
+th{
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(237, 121, 248);
+    box-shadow: 3px 3px 4px 4px rgb(247, 84, 84);
+}
+td{
+    padding: 10px;
+   background-color: rgb(253, 203, 251);
+   box-shadow: 4px 4px 4px 4px rgb(247, 84, 84);
+}
+table>th{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(166, 253, 166);
+}
+table{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    /* box-shadow: 4px 4px 4px 4px rgb(247, 84, 84); */
+    margin-right:200px ;
+    margin-left:200px ;
+    /* background:linear-gradient(rgb(184, 184, 235), rgb(113, 113, 182) ) ; */
+    
+}
+.fas.fa-trash:hover{
+    color:red;
+    background-color: green;
+}
+footer{
+    grid-area: zf;
+    background-color: black;
+    color: white;
+}

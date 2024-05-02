@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIVIAL</title>
+    <link rel="stylesheet" href="assets/estilos/estilo.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/estilos/modal.css">
+    <script src="assets/scripts/script.js"></script>
+   
+</head>
+<body onload="fInicio()">
+    <div id="div_modal">
+        <!-- esto es para la modal de categorias -->
+        <div id="div_form_categorias">
+            <input type="hidden" id="cat_id">
+            <label for="cat_categoria">categoria</label>
+            <input type="text" id="cat_categoria">
+            <label for="cat_color">color</label>
+            <input type="text" id="cat_color">
+            <p id="cat_error" class="linea_error"></p>
+            <div class="botonera">
+                <div onclick="fOcultarModal()">Cancelar</div>
+                <div id="boton_grabar_categoria" onclick="fCategoriaCRUD('a')">Grabar</div>
+                <div id="boton_eliminar_categoria" onclick="fCategoriaCRUD('e')">Eliminar</div>
+                <div id="boton_modificar_categoria" onclick="fCategoriaCRUD('m')">Modificar</div>
+            </div>
+        </div>
+       
+       <!-- esto es para la modal de preguntas -->
+       <div id="div_form_preguntas">
+        <input type="hidden" id="pr_id">
+        <label for="pr_pregunta">preguntas</label>
+        <input type="text" id="pr_pregunta">
+        <label for="pr_r1">Respuesta 1</label>
+        <input type="text" id="pr_r1">
+        <label for="pr_r2">Respuesta 2</label>
+        <input type="text" id="pr_r2">
+        <label for="pr_r3">Respuesta 3</label>
+        <input type="text" id="pr_r3">
+        <label for="pr_r4">Respuesta 4</label>
+        <input type="text" id="pr_r4">
+        <label for="pr_valida">Válida</label>
+        <input type="text" id="pr_valida">
+        <!-- esto es para el combo -->
+        <!-- en el for es el que recoge los datos  -->
+        <label for="pr_cat_id">categoria</label>
+        <!-- y en el id es donde lo pinta -->
+        <div id="cat_categorias"></div>
+        <!-- <input type="text" id="cat_categoria"> -->
+        <p id="pr_error" class="linea_error"></p>
+        <p id="pr_validacion_error" class="linea_error"></p>
+        <p id="pr_error" class="linea_error"></p>
+        <div class="botonera">
+            <div onclick="fOcultarModal()">Cancelar</div>
+            <div id="boton_grabar_preguntas" onclick="fPreguntasCRUD('a')">Grabar</div>
+            <div id="boton_eliminar_preguntas" onclick="fPreguntasCRUD('e')">Eliminar</div>
+            <div id="boton_modificar_preguntas" onclick="fPreguntasCRUD('m')">Modificar</div>
+        </div>
+    </div>
+    </div>
+
+    <header><div>TEST</div></header>
+    <nav>
+       <div onclick="fMostrarCategorias()">Categorias</div>
+       <div onclick="fMostrarPreguntas()">Preguntas</div>
+    </nav>
+    <section>
+        <!-- esto es para que te muestre las selecciones (el combo) -->
+        <!-- <select name="" id="prueba">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+        </select> -->
+    </section>
+    <footer></footer>
+</body>
+</html>
